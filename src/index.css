@@ -50,6 +50,11 @@ footer {
   padding: 1.8rem;
 }
 
+footer div{
+  display: flex;
+  flex-direction: column;
+}
+
 footer h2{
   font-size: 1.4rem;
 }
@@ -103,8 +108,8 @@ footer button :hover{
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
-  overflow-y: scroll;
+  padding: 1.5rem;
+  overflow-y: auto;
   height: 100%;
   width: 80%;
   max-width: 800px;
@@ -122,7 +127,7 @@ footer button :hover{
   border: none;
   outline: none;
   margin-right: auto;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .sidebarContent button i{
@@ -133,6 +138,22 @@ footer button :hover{
 
 .sidebarContent button :hover{
   opacity: 0.7;
+}
+
+.descriptionTitle{
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+.descriptionContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.sidebarContent h2{
+  font-size: 1.4rem;
+  font-weight: 200;
 }
 
 .loadingState{

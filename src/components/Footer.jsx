@@ -5,8 +5,8 @@ export default function Footer(props){
     <footer>
       <div className="footerGradient"></div>
       <div>
-        <h2>{data?.title}</h2>
         <h1>APOD PROJECT</h1>
+        <h2>{data?.title}</h2>
       </div>
 
       <button onClick={handleToggleModal}>
