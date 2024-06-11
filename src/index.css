@@ -182,6 +182,7 @@ footer button :hover{
   .sidebar{
     position: relative;
     inset: unset;
+    max-height: 100vh;
     min-width: 30%;
     box-shadow: 0 0 40px 1 #030615;
   }
