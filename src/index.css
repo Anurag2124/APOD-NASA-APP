@@ -1,0 +1,178 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #030615;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.imgContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 100vh;
+}
+
+.bgImage{
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  object-fit: cover;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.8rem;
+}
+
+footer h2{
+  font-size: 1.4rem;
+}
+
+footer h1{
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+footer button{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+footer button i{
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition-duration: 200ms;
+}
+
+footer button :hover{
+  opacity: 0.7;
+}
+
+.footerGradient{
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, #030615, rgba(255,255,255,0));
+}
+
+.sidebar{
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.sidebarOverlay{
+  position: absolute;
+  inset: 0;
+  background: #030615;
+  opacity: 0.6;
+}
+
+.sidebarContent{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  overflow-y: scroll;
+  height: 100%;
+  width: 80%;
+  max-width: 800px;
+  margin-left: auto;
+  background: #030615;
+}
+
+.sidebarContent div{
+  flex: 1;
+}
+
+.sidebarContent button{
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.sidebarContent button i{
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+
+.sidebarContent button :hover{
+  opacity: 0.7;
+}
+
+.loadingState{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.loadingState i{
+  font-size: 4rem;
+  opacity: 0.2;
+  animation: spin 1200ms linear infinite;
+}
+
+@keyframes spin {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 640px){
+  .sidebar{
+    position: relative;
+    inset: unset;
+    min-width: 30%;
+    box-shadow: 0 0 40px 1 #030615;
+  }
+
+  .sidebarContent{
+    margin: unset;
+    width: 100%;
+  }
+
+  .sidebarOverlay{
+    right: 0;
+    left: unset;
+    width: 100vw;
+  }
+}
